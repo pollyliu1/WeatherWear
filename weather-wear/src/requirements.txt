@@ -1,3 +1,0 @@
-# pip3 install --requirement ./requirements.txt
-google-api-core==1.21.0
-google-cloud-vision==1.0.0
