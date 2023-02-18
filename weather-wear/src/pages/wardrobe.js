@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Wardrobe.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +14,39 @@ export default function Wardrobe() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.icon" />
       </Head>
+      <div className={styles.body}>
+        <div className={styles.sidebar}>
+          <h1 className={styles.title}>Today's Outfit</h1>
+          <h3 className={styles.intro}>Welcome to Today's Outfits</h3>
+          <form action='' method='GET' className={styles.form}>
+            <div className={styles.question}>
+              <label className={styles.label}>Gender: </label>
+              <input type='text' className={styles.input} id='gender' name='gender'></input>
+            </div>
+
+            <div className={styles.question}>
+              <label className={styles.label}>Location: </label>
+              <input type='text' className={styles.input} id='location' name='location'></input>
+            </div>
+            
+            <div className={styles.question}>
+              <label className={styles.label}>Style: </label>
+              <input type='text' className={styles.input} id='style' name='style'></input>
+            </div>
+
+            <button className={styles.btn} type="submit">Find Outfit</button>
+          </form>
+
+          <p className={styles.weather}>Weather: </p>
+          <p className={styles.weather}>Temperature:</p>
+          <p className={styles.weather}>Winds:</p>
+        </div>
+
+        <div className='outfit'>
+          <img></img>
+          <p>Outfit:</p>
+        </div>
+      </div>
     </>
   )
 }
