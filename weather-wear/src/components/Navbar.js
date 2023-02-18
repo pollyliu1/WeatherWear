@@ -10,10 +10,10 @@ const Navbar = () => {
             </div>
             <div className='leftlink-wrapper'>
                 <Link className='leftlink' href='/wardrobe' passHref>
-                    Wardrobe
+                    wardrobe
                 </Link>
                 <Link className='leftlink' href='/info' passHref>
-                    Info
+                    info
                 </Link>
         </div>
       </div>

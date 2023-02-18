@@ -15,10 +15,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.icon" />
       </Head>
-      <div className='home-text'>
-        <h1 className={styles.title}>WeatherWear</h1>
-        <p className='home-description'>the bridge between style and comfort.</p>
+      <div className ='section'>
+        <div className='home-text'>
+          <h1 className={styles.title}>WeatherWear</h1>
+          <p className='home-description'>the bridge between style and comfort.</p>
+        </div>
       </div>
+      
+      
     </>
   )
 }

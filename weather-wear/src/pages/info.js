@@ -16,10 +16,10 @@ export default function Info() {
       </Head>
       <div className="about-description">
       <h2>
-          Get Started with WeatherWear
+          get started with WeatherWear
         </h2>
         <h4>
-          An AI powered web app to assist you in dressing for the weather.
+          an AI powered web app to assist you in dressing for the weather.
         </h4>  
       </div>
       
