@@ -1,6 +1,6 @@
 .body {
     display: flex;
-    justify-content: space-between;
+    gap: 28vw;
     margin: 2vw;
 }
 
@@ -11,10 +11,7 @@
 
 .intro {
     font-size: 4vh;
-}
-
-.form {
-    
+    margin-bottom: 1vh;
 }
 
 .question {
@@ -25,19 +22,25 @@
 .input, .label {
     font-size: 2.5vh;
     padding: 0.3vh;
-    padding-left: 1vw;
     padding-right: 1vw;
 }
 
 .btn {
     font-size: 3vh;
-    padding: 0.2vw;
+    margin-top: 0.8vh;
+    padding: 0.3vh;
     padding-left: 1vw;
     padding-right: 1vw;
+    margin-bottom: 5vh;
 }
 
 .weather {
     font-size: 3vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
+}
+
+.outfit {
+    position: absolute;
+    
 }

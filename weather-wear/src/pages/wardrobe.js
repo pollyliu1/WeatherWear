@@ -21,17 +21,17 @@ export default function Wardrobe() {
           <form action='' method='GET' className={styles.form}>
             <div className={styles.question}>
               <label className={styles.label}>Gender: </label>
-              <input type='text' className={styles.input} id='gender' name='gender'></input>
+              <input type='text' className={styles.input} id='gender' name='gender' autoComplete='off'></input>
             </div>
 
             <div className={styles.question}>
               <label className={styles.label}>Location: </label>
-              <input type='text' className={styles.input} id='location' name='location'></input>
+              <input type='text' className={styles.input} id='location' name='location' autoComplete='off'></input>
             </div>
             
             <div className={styles.question}>
               <label className={styles.label}>Style: </label>
-              <input type='text' className={styles.input} id='style' name='style'></input>
+              <input type='text' className={styles.input} id='style' name='style' autoComplete='off'></input>
             </div>
 
             <button className={styles.btn} type="submit">Find Outfit</button>
@@ -44,7 +44,8 @@ export default function Wardrobe() {
 
         <div className='outfit'>
           <img></img>
-          <p>Outfit:</p>
+          <p className={styles.intro}>Outfit</p>
+          <img src="@/images/dress.jpg"></img>
         </div>
       </div>
     </>
