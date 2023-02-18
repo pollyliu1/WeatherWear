@@ -84,18 +84,51 @@ body {
   background-color: #232737;
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  
+  color: #f2f2ff;
 }
 
 a {
-  color: #f2f2ff;
   text-decoration: none;
 }
 
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+  padding-right: 4vw;
+  background-color: #232737;
+}
+
+.rightlink {
+  font-size: 4vh;
+  color: #f2f2ff;
+}
+
+.leftlink-wrapper {
+  display: flex;
+  gap: 1vw;
+}
+
 .leftlink {
+  font-size: 3vh;
+  color: #f2f2ff;
+}
+
+.home-text {
+  position: absolute;
+  top: 38%;
+  margin-left: 2vw;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+
+.home-title {
+  font-family: 'Carattere', cursive;
+  font-size: 12vh;
+}
+
+.home-description {
   font-size: 3vh;
 }
 

@@ -2,13 +2,13 @@ import Link from 'next/link';
 
 const Navbar = () => {
     return (
-        <>
+        <div className='navbar-wrapper'>
             <div>
                 <Link className='rightlink' href='/' passHref>
                     WeatherWear
                 </Link>
             </div>
-            <div>
+            <div className='leftlink-wrapper'>
                 <Link className='leftlink' href='/wardrobe' passHref>
                     Wardrobe
                 </Link>
@@ -16,7 +16,7 @@ const Navbar = () => {
                     Info
                 </Link>
         </div>
-      </>
+      </div>
     );
 };
 
