@@ -1,0 +1,46 @@
+.body {
+    display: flex;
+    gap: 28vw;
+    margin: 2vw;
+}
+
+.title {
+    font-size: 6vh;
+    margin-bottom: 2vh;
+}
+
+.intro {
+    font-size: 4vh;
+    margin-bottom: 1vh;
+}
+
+.question {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.input, .label {
+    font-size: 2.5vh;
+    padding: 0.3vh;
+    padding-right: 1vw;
+}
+
+.btn {
+    font-size: 3vh;
+    margin-top: 0.8vh;
+    padding: 0.3vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-bottom: 5vh;
+}
+
+.weather {
+    font-size: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.outfit {
+    position: absolute;
+    
+}
