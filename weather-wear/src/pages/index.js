@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <div className='home-text'>
         <h1 className={styles.title}>WeatherWear</h1>
-        <p className='home-description'>The bridge between style and comfort.</p>
+        <p className='home-description'>the bridge between style and comfort.</p>
       </div>
     </>
   )
