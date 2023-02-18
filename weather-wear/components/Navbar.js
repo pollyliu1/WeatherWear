@@ -4,15 +4,15 @@ const Navbar = () => {
     return (
         <>
             <div>
-                <Link href='/' passHref>
-                    Home
+                <Link className='rightlink' href='/' passHref>
+                    WeatherWear
                 </Link>
             </div>
             <div>
-                <Link href='/wardrobe' passHref>
+                <Link className='leftlink' href='/wardrobe' passHref>
                     Wardrobe
                 </Link>
-                <Link href='/info' passHref>
+                <Link className='leftlink' href='/info' passHref>
                     Info
                 </Link>
         </div>
