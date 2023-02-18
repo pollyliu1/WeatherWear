@@ -18,7 +18,7 @@ export default function Wardrobe() {
       <div className={styles.body}>
         <div className={styles.sidebar}>
           <h1 className={styles.title}>Today's Outfit</h1>
-          <h3 className={styles.intro}>Welcome to Today's Outfits</h3>
+          <h4 className={styles.intro}>Enter your information below:</h4>
           <form action='' method='GET' className={styles.form}>
             <div className={styles.question}>
               <label className={styles.label}>Gender: </label>

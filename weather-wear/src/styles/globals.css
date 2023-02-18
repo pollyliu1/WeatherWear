@@ -173,3 +173,8 @@ a {
   padding-left: 7vw;
   font-size: 2rem;
 }
+
+label {
+  display: inline-block;
+  width: 150px;
+}

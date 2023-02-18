@@ -24,7 +24,7 @@ export default function Home() {
       </div>
     </div>
       <div className='about'>
-        <h1 className='about-title'>About Us</h1>
+        <h1 className='about-title'>about us</h1>
         <p className='about-info'>We are a website that generates outfits based on gender, style, and weather.
          Simply enter the information into the wardobe section and view outfits that will make you feel
          empowered.</p>
