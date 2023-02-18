@@ -14,6 +14,15 @@ export default function Info() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.icon" />
       </Head>
+      <div className="about-description">
+      <h2>
+          Get Started with WeatherWear
+        </h2>
+        <h4>
+          An AI powered web app to assist you in dressing for the weather.
+        </h4>  
+      </div>
+      
     </>
   )
 }

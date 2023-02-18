@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.icon" />
       </Head>
       <div className='home-text'>
-        <h1 className='home-title'>WeatherWear</h1>
+        <h1 className={styles.title}>WeatherWear</h1>
         <p className='home-description'>The bridge between style and comfort.</p>
       </div>
     </>

@@ -121,15 +121,26 @@ a {
   margin-left: 2vw;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
 
 .home-title {
-  font-family: 'Carattere', cursive;
+  font-family: 'Hurricane', cursive;
   font-size: 12vh;
 }
 
+
 .home-description {
   font-size: 3vh;
+}
+
+.about-description h2 {
+  font-size: 5vh;
+  padding: 40px;;
+}
+
+.about-description h4 {
+  font-size: 3vh;
+  padding-left: 50px;
 }
 
 @media (prefers-color-scheme: dark) {
