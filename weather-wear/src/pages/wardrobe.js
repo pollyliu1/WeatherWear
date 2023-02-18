@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Wardrobe.module.css'
+import dressPic from './images/dress.jpg'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -45,7 +46,10 @@ export default function Wardrobe() {
         <div className='outfit'>
           <img></img>
           <p className={styles.intro}>Outfit</p>
-          <img src="@/images/dress.jpg"></img>
+          <Image src={dressPic}
+            width={200}>
+
+          </Image>
         </div>
       </div>
     </>
