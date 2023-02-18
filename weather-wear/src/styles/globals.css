@@ -77,6 +77,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'League Spartan', sans-serif;
 }
 
 html,
@@ -103,6 +104,7 @@ a {
 .rightlink {
   font-size: 4vh;
   color: #f2f2ff;
+  font-family: 'Hurricane', cursive;
 }
 
 .leftlink-wrapper {
@@ -131,6 +133,7 @@ a {
 
 .home-description {
   font-size: 3vh;
+  font-family: 'League Spartan', sans-serif;
 }
 
 .about-description h2 {
@@ -148,3 +151,4 @@ a {
     color-scheme: dark;
   }
 }
+
