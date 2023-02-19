@@ -4,13 +4,65 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Wardrobe.module.css'
 import dressPic from './images/dress.jpg'
 import React from 'react'
+import { useState } from 'react'
 import FetchPinterest from '../components/Puppeteer'
 import Card from '@mui/material/Card'
 import Button from '@mui/material/Button';
 
 const inter = Inter({ subsets: ['latin'] })
 
+function LocationPage() {
+  const [location, setLocation] = useState('');
+
+  const fetchLocation = async () => {
+    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=5d3ee5a55974f0c208937bb96c64d208');
+    const data = await response.json();
+    setLocation(data);
+    console.log(data);
+  }
+  
+  
+}
+
+async function getData(e) {
+  e.preventDefault();
+  let entered = document.querySelector('input[name=location]').value;
+  console.log("Hi");
+  try {
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${entered}&APPID=5d3ee5a55974f0c208937bb96c64d208`);
+      console.log("Hi");
+      if(!response.ok) {
+          throw new Error('Network response was not OK');
+      } else {
+          const data = await response.json();
+          console.log(data);
+          console.log("Hi");
+      }
+  } catch (e) {
+      console.log(e);
+      throw new Error ("Sorry but that is not a valid location.");
+  } 
+}
+
+function getImage() {
+  const submitLocation = async () => {
+    const response = await fetch('https://pollyliu.autocode.dev/weatherwear@dev/stablediffusion/', {
+      method: 'POST',
+      body: JSON.stringify({ location }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    const data = await response.json();
+    setTimeout(() => {
+        return data;
+    }, 1000);
+  }
+}
+
 export default function Wardrobe() {
+  const [entered, setEntered] = useState('');
+  const [image, setImage] = useState(<img src={dressPic} alt=""></img>);
   return (
     <>
       <FetchPinterest />
@@ -35,7 +87,7 @@ export default function Wardrobe() {
 
             <div className={styles.question}>
               <label className={styles.label}>Location: </label>
-              <input type='text' className={styles.input} id='location' name='location' autoComplete='off'></input>
+              <input type='text' className={styles.input} id='location' name='location' autoComplete='off' onChange={(e) => setEntered(e.target.value)}></input>
             </div>
             
             <div className={styles.question}>
@@ -43,7 +95,7 @@ export default function Wardrobe() {
               <input type='text' className={styles.input} id='style' name='style' autoComplete='off'></input>
             </div>
 
-            <Button className={styles.btn} type="submit">Generate Outfit</Button>
+            <Button className={styles.btn} type="submit" onClick={getData}>Generate Outfit</Button>
           </form>
 
           <p className={styles.weather}>Weather: </p>
@@ -56,7 +108,7 @@ export default function Wardrobe() {
           <div className='outfit'>
             <img></img>
             <p className={styles.intro}>Outfit</p>
-            <Image src={dressPic}
+            <Image src={dressPic} alt="outfit pic"
               width={200}>
             </Image>
           </div>
