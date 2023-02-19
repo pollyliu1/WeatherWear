@@ -16,3 +16,21 @@
   font-size: 20vh;
 }
 
+.header {
+  padding-left: 2vw;
+  font-size: 7vh;
+}
+
+.paragraph {
+  line-height: 150%;
+  font-size: 3vh;
+  padding-top: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.aboutdescription {
+  margin-right: 4vw;
+  margin-left: 4vw;
+}
+
