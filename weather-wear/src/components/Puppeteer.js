@@ -23,25 +23,6 @@ function LocationPage() {
         return data;
     }, 1000);
   }
-
-  return (
-    <>
-      <div>
-        <input
-          type='text'
-          value={location}
-          onChange={e => setLocation(e.target.value)}
-        />
-        <button onClick={submitLocation}>Submit Location</button>
-      </div>
-      <hr />
-      <button onClick={fetchLocation}>Get Locations</button>
-
-        <div key={location.id}>
-            {location.id}. {location.text}
-        </div>
-    </>
-  )
 }
 
 export default LocationPage

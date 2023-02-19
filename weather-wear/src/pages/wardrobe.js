@@ -8,18 +8,23 @@ import { useState } from 'react'
 import FetchPinterest from '../components/Puppeteer'
 import Card from '@mui/material/Card'
 import Button from '@mui/material/Button';
+import storedData from './data'
 
 const inter = Inter({ subsets: ['latin'] })
+const src = `${storedData.image}`;
 
-function LocationPage() {
-  const [location, setLocation] = useState('');
-
-  const fetchLocation = async () => {
-    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=5d3ee5a55974f0c208937bb96c64d208');
-    const data = await response.json();
-    setLocation(data);
-    console.log(data);
-  }
+const getImage = async () => {
+  const response = await fetch('https://pollyliu.autocode.dev/weatherwear@dev/stablediffusion/', {
+    method: 'POST',
+    body: JSON.stringify({ weather }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  const data = await response.json();
+  setTimeout(() => {
+      storedData.image = data;
+  }, 1000);
 }
 
 async function getData(e) {
@@ -31,9 +36,8 @@ async function getData(e) {
           throw new Error('Network response was not OK');
       } else {
           const data = await response.json();
-          let main_temp = data['main'].temp;
-          let weather = data['weather'][0].description;
-          console.log(weather);
+          storedData.temp = data['main'].temp;
+          storedData.weather = data['weather'][0].descriptio;
       }
   } catch (e) {
       console.log(e);
@@ -41,25 +45,9 @@ async function getData(e) {
   } 
 }
 
-function getImage() {
-  const submitLocation = async () => {
-    const response = await fetch('https://pollyliu.autocode.dev/weatherwear@dev/stablediffusion/', {
-      method: 'POST',
-      body: JSON.stringify({ location }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    const data = await response.json();
-    setTimeout(() => {
-        return data;
-    }, 1000);
-  }
-}
-
 export default function Wardrobe() {
   const [entered, setEntered] = useState('');
-  const [image, setImage] = useState(<img src={dressPic} alt=""></img>);
+  const [image, setImage] = useState('');
   return (
     <>
       <FetchPinterest />
@@ -105,8 +93,10 @@ export default function Wardrobe() {
           <div className='outfit'>
             <img></img>
             <p className={styles.intro}>Outfit</p>
-            <Image src={dressPic} alt="outfit pic"
-              width={200}>
+            <Image src={storedData.image} alt="outfit pic"
+              loader={() => src}
+              width={200}
+              height={200}>
             </Image>
           </div>
         
