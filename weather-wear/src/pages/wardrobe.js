@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Wardrobe.module.css'
 import dressPic from './images/dress.jpg'
-import Card from '@mui/material';
 import React from 'react'
 
 const inter = Inter({ subsets: ['latin'] })

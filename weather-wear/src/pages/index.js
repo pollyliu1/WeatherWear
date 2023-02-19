@@ -6,6 +6,8 @@ import styles from '@/styles/Home.module.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import Image from 'next/image'
+import hangers from './images/hangers.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,11 +25,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.icon" />
       </Head>
-      <div className ='section'>
+      <div className ='container'>
         <div className='home-text'>
           <h1 className={styles.title}>WeatherWear</h1>
           <p className='home-description'>the bridge between style and comfort.</p>
         </div>
+        <div className='hangers'>
+            <Image src={hangers}
+              width={400}>
+            </Image>
+          </div>
       </div>
     </div>
       <div className='about' data-aos="fade-in">

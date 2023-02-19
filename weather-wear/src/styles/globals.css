@@ -189,3 +189,13 @@ label {
   opacity: 1;
   transform: translate(0, 0);
  }
+
+ .hangers {
+  display: flex;
+  padding-left: 20vw;
+  padding-top: 20vw;
+ }
+
+ .container {
+  display: flex;
+ }
