@@ -4,7 +4,7 @@ import Info from './info'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import AOS from 'aos';
-import 'aos/dist/aos.css';
+//import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Image from 'next/image'
 import hangers from './images/hangers.png'
