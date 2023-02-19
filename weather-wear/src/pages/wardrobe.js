@@ -3,10 +3,35 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Wardrobe.module.css'
 import dressPic from './images/dress.jpg'
+import FetchWeather from '../components/WeatherAPI'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
 export default function Wardrobe() {
+  const [state, setState] = useState(
+    {
+        gender: "",
+        location: "",
+        style:""
+    }
+  )
+
+  const handleChange = (event_target) => {
+    const value = event_target.target.value;
+    setState({
+      ...state,
+      [event_target.target.name]: value
+    });
+
+  }
+
+  const handleSubmit = () => {
+    console.log(state)
+    //pass state to fetchweather component
+  }
+
   return (
     <>
       <Head>
@@ -18,24 +43,25 @@ export default function Wardrobe() {
       <div className={styles.body}>
         <div className={styles.sidebar}>
           <h1 className={styles.title}>Today's Outfit</h1>
+          <FetchWeather prop=""/>
           <h3 className={styles.intro}>Welcome to Today's Outfits</h3>
           <form action='' method='GET' className={styles.form}>
             <div className={styles.question}>
               <label className={styles.label}>Gender: </label>
-              <input type='text' className={styles.input} id='gender' name='gender' autoComplete='off'></input>
+              <input type='text' className={styles.input} id='gender' name='gender' autoComplete='off' value={state.gender} onChange={handleChange}></input>
             </div>
 
             <div className={styles.question}>
               <label className={styles.label}>Location: </label>
-              <input type='text' className={styles.input} id='location' name='location' autoComplete='off'></input>
+              <input type='text' className={styles.input} id='location' name='location' autoComplete='off' value={state.location} onChange={handleChange}></input>
             </div>
             
             <div className={styles.question}>
               <label className={styles.label}>Style: </label>
-              <input type='text' className={styles.input} id='style' name='style' autoComplete='off'></input>
+              <input type='text' className={styles.input} id='style' name='style' autoComplete='off' value={state.style} onChange={handleChange}></input>
             </div>
 
-            <button className={styles.btn} type="submit">Find Outfit</button>
+            <button className={styles.btn} type="button" onClick={handleSubmit}>Find Outfit</button>
           </form>
 
           <p className={styles.weather}>Weather: </p>
