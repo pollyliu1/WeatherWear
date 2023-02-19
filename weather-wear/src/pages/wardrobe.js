@@ -16,7 +16,7 @@ const src = `${storedData.image}`;
 
 
 const ImageCard = async () => {
-  const prompt = {"image": `female clothing ${storedData.weather}`}
+  const prompt = {"topic": `female_${storedData.style}_clothes`}
   // const response = await fetch('https://pollyliu.autocode.dev/weatherwear@dev/puppeteer/', {
   //   method: 'POST',
   //   headers: {
@@ -34,7 +34,6 @@ const ImageCard = async () => {
   .then(response=>{
     console.log(response);
     storedData.image = response;
-    console.log(storedData.image);
   })
   
   const data = await response.json();
