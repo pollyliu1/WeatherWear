@@ -103,8 +103,13 @@ a {
 
 .rightlink {
   font-size: 7vh;
+  padding: 10px;
   color: #f2f2ff;
   font-family: 'Hurricane', cursive;
+}
+
+.rightlink:hover {
+  background-color: rgb(17, 16, 26);
 }
 
 .leftlink-wrapper {
@@ -114,7 +119,12 @@ a {
 
 .leftlink {
   font-size: 3vh;
+  padding: 10px;
   color: #f2f2ff;
+}
+
+.leftlink:hover {
+  background-color: rgb(17, 16, 26);
 }
 
 .home-text {
@@ -153,7 +163,7 @@ a {
 }
 
 .section {
-  height: 80vh;
+  height: 9 0vh;
 }
 
 .about {
@@ -179,16 +189,6 @@ label {
   display: inline-block;
   width: 150px;
 }
-
-.animated {
-  opacity: 0;
-  transition: all 0.8s;
-}
-  
-.animated.visible {
-  opacity: 1;
-  transform: translate(0, 0);
- }
 
  .hangers {
   display: flex;
