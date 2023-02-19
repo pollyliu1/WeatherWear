@@ -19,7 +19,8 @@
     padding-bottom: 1vh;
 }
 
-.input, .label {
+.input,
+.label {
     font-size: 2.5vh;
     padding: 0.3vh;
     padding-right: 1vw;
