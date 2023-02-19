@@ -5,6 +5,7 @@ import styles from '@/styles/Wardrobe.module.css'
 import dressPic from './images/dress.jpg'
 import React from 'react'
 import Card from '@mui/material/Card'
+import Button from '@mui/material/Button';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,7 +40,7 @@ export default function Wardrobe() {
               <input type='text' className={styles.input} id='style' name='style' autoComplete='off'></input>
             </div>
 
-            <button className={styles.btn} type="submit">Find Outfit</button>
+            <Button className={styles.btn} type="submit">Find Outfit</Button>
           </form>
 
           <p className={styles.weather}>Weather: </p>
