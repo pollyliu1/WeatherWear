@@ -43,7 +43,7 @@ export default function Wardrobe() {
               <input type='text' className={styles.input} id='style' name='style' autoComplete='off'></input>
             </div>
 
-            <Button className={styles.btn} type="submit">Find Outfit</Button>
+            <Button className={styles.btn} type="submit">Generate Outfit</Button>
           </form>
 
           <p className={styles.weather}>Weather: </p>

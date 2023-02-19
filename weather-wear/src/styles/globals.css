@@ -214,15 +214,11 @@ label {
  }
 
  .MuiButton-root {
-  background: red;
+  background-color: #232737;
   color: #f2f2ff;
-  font-family: 'League Spartan', sans;
  }
 
- .MuiButton-root:hover {
-  background-color: #4f5463;
-  
- }
+ 
 
  .about-info {
   padding: 30px;
