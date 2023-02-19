@@ -22,6 +22,7 @@ export default function Wardrobe() {
       </Head>
       
       <div className={styles.body}>
+        <div className="card-style">
       <Card>
         <div className={styles.sidebar}>
           <h1 className={styles.title}>Today's Outfit</h1>
@@ -50,7 +51,7 @@ export default function Wardrobe() {
           <p className={styles.weather}>Winds:</p>
         </div>
         </Card>
-
+        </div>
         
           <div className='outfit'>
             <img></img>

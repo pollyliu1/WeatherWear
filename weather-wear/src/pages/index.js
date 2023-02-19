@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import Image from 'next/image'
 import hangers from './images/hangers.png'
 import { motion } from 'framer-motion';
+import clothes from './images/clothes.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -53,10 +54,15 @@ export default function Home() {
     </div>
     
       <div className='about' data-aos="fade-in">
-        <h1 className='about-title'>Get started with WeatherWear.</h1>
-        <p className='about-info'>Start your day off right by letting WeatherWear choose your fit of the day.</p>
-        <p className='about-info'>Just enter information about your gender, style, and location and it will generate outfits that will make you feel empowered and ready for whatever weather. </p>
+        <h1 className='about-title'>Get started with WeatherWear</h1>
+        <p className='caption'>an AI powered assistant to help generate clothing recommendations based on today's weather.</p>
+        <p className='about-info'>Just enter information about your gender, style, and location and it will generate outfits that will make you feel <span class="bold"> empowered</span> and ready for <span class="bold">whatever weather, whenever.</span> </p>
         <p className='about-info'>Feel the change in your everyday life, starting today, with WeatherWear. </p>
+        <div className='clothes'>
+            <Image src={clothes}
+              width={400}>
+            </Image>
+          </div>
       </div>
     </>
   )

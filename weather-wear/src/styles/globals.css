@@ -185,6 +185,13 @@ a {
   font-size: 2rem;
 }
 
+.caption {
+  padding-left: 7vw;
+  padding-right: 7vw;
+  font-size: 2rem;
+  padding-bottom: 60px;
+}
+
 label {
   display: inline-block;
   width: 150px;
@@ -215,4 +222,23 @@ label {
  .MuiButton-root:hover {
   background-color: #4f5463;
   
+ }
+
+ .about-info {
+  padding: 30px;
+  padding-left: 120px;
+ }
+
+ .clothes {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ }
+
+ .bold {
+  font-weight: bolder;
+ }
+
+ .card-style {
+  padding-left: 100px;
  }
