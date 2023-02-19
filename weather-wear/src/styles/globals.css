@@ -199,3 +199,20 @@ label {
  .container {
   display: flex;
  }
+
+ .MuiCard-root {
+  padding: 50px;
+  background: #f2f2ff;
+  border-radius: 25px;
+ }
+
+ .MuiButton-root {
+  background: #232737;
+  color: #f2f2ff;
+  font-family: 'League Spartan', sans;
+ }
+
+ .MuiButton-root:hover {
+  background-color: #4f5463;
+  
+ }
