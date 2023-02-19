@@ -104,8 +104,10 @@ export default function Wardrobe() {
               <label className={styles.label}>Style: </label>
               <input type='text' className={styles.input} id='style' name='style' autoComplete='off'></input>
             </div>
-
-            <Button className={styles.btn} type="submit" onClick={getData}>Generate Outfit</Button>
+            <div className='button-center'>
+            <Button className={styles.btn} type="submit">Generate Outfit</Button>
+            </div>
+            
           </form>
 
           <p className={styles.weather}>Weather: {storedData.weather} </p>
