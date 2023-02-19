@@ -53,10 +53,10 @@ export default function Home() {
     </div>
     
       <div className='about' data-aos="fade-in">
-        <h1 className='about-title'>About Us</h1>
-        <p className='about-info'>We are a website that generates outfits based on gender, style, and weather.
-         Simply enter the information into the wardobe section and it will generate outfits that will make you feel
-         empowered. Feel the change in your everyday life, starting today, with WeatherWear. </p>
+        <h1 className='about-title'>Get started with WeatherWear.</h1>
+        <p className='about-info'>Start your day off right by letting WeatherWear choose your fit of the day.</p>
+        <p className='about-info'>Just enter information about your gender, style, and location and it will generate outfits that will make you feel empowered and ready for whatever weather. </p>
+        <p className='about-info'>Feel the change in your everyday life, starting today, with WeatherWear. </p>
       </div>
     </>
   )

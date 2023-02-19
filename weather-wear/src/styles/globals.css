@@ -207,7 +207,7 @@ label {
  }
 
  .MuiButton-root {
-  background: #232737;
+  background: red;
   color: #f2f2ff;
   font-family: 'League Spartan', sans;
  }
