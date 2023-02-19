@@ -13,20 +13,39 @@ import storedData from './data'
 const inter = Inter({ subsets: ['latin'] })
 const src = `${storedData.image}`;
 
-const getImage = async () => {
-  const response = await fetch('https://pollyliu.autocode.dev/weatherwear@dev/stablediffusion/', {
-    method: 'POST',
-    body: `female clothing during: ${storedData.weather} temperature: ${storedData.temp}`,
-    headers: {
-      'Content-Type': 'text/html'
-    }
+
+
+const ImageCard = async () => {
+  const prompt = {"image": `${storedData.weather}`}
+  // const response = await fetch('https://pollyliu.autocode.dev/weatherwear@dev/puppeteer/', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(prompt),
+    
+  // })
+  return fetch("https://pollyliu.autocode.dev/weatherwear@dev/puppeteer/", {
+    method: "POST",
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(prompt),
   })
+  .then(response=>response.json())
+  .then(response=>{
+    console.log(response);
+    storedData.image = response;
+    console.log(storedData.image);
+  })
+  
   const data = await response.json();
-  console.log(data);
+  console.log(response);
+  console.log(typeof response);
+  
   setTimeout(() => {
       storedData.image = data;
   }, 1000);
 }
+
 
 async function getData(e) {
   e.preventDefault();
@@ -39,7 +58,8 @@ async function getData(e) {
           const data = await response.json();
           storedData.temp = data['main'].temp;
           storedData.weather = data['weather'][0].description;
-          getImage();
+          console.log("hi await");
+          await ImageCard();
       }
   } catch (e) {
       console.log(e);
