@@ -4,7 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Wardrobe.module.css'
 import dressPic from './images/dress.jpg'
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import GetImage from '../components/StableDiffusion'
 import Card from '@mui/material/Card'
 import Button from '@mui/material/Button';
@@ -35,12 +35,19 @@ const ImageCard = async () => {
     console.log(response);
     storedData.image = response;
   })
+
+  
   
 }
 
 
 async function getData(e) {
-  e.preventDefault();
+  // const [data, setImage] = useState('');
+   e.preventDefault();
+  // useEffect(() => {
+  //   ImageCard();
+  // }, [data]);
+// fetchData() is called whenever data is updated.
   let entered = document.querySelector('input[name=location]').value;
   let style = document.querySelector('input[name=style]').value;
 
@@ -66,7 +73,7 @@ async function getData(e) {
 
 export default function Wardrobe() {
   const [entered, setEntered] = useState('');
-  const [image, setImage] = useState('');
+  
   return (
     <>
       <Head data-aos="fade-in">
