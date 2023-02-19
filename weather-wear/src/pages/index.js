@@ -4,7 +4,7 @@ import Info from './info'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import AOS from 'aos';
-import 'aos/dist/aos.css';
+//import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Image from 'next/image'
 import hangers from './images/hangers.png'
@@ -37,8 +37,14 @@ export default function Home() {
           </div>
       </div>
     </div>
+<<<<<<< Updated upstream
       <div className='about' data-aos="fade-in">
         <h1 className='about-title'>About Us</h1>
+=======
+      <div className='about'>
+        <h1 className='about-title'>Get started with WeatherWear</h1>
+        <p className='about-info'>An AI powered web app to assist you in dressing for the weather.</p> 
+>>>>>>> Stashed changes
         <p className='about-info'>We are a website that generates outfits based on gender, style, and weather.
          Simply enter the information into the wardobe section and it will generate outfits that will make you feel
          empowered. Feel the change in your everyday life, starting today, with WeatherWear. </p>
