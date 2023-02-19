@@ -3,10 +3,17 @@ import Wardrobe from './wardrobe'
 import Info from './info'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+  
   return (
     <>
     <div className='section'>
@@ -23,12 +30,14 @@ export default function Home() {
         </div>
       </div>
     </div>
-      <div className='about'>
+      <div className='about' data-aos="fade-in">
         <h1 className='about-title'>About Us</h1>
         <p className='about-info'>We are a website that generates outfits based on gender, style, and weather.
-         Simply enter the information into the wardobe section and view outfits that will make you feel
-         empowered.</p>
+         Simply enter the information into the wardobe section and it will generate outfits that will make you feel
+         empowered. Feel the change in your everyday life, starting today, with WeatherWear. </p>
       </div>
     </>
   )
 }
+
+

@@ -171,5 +171,16 @@ a {
 
 .about-info {
   padding-left: 7vw;
+  padding-right: 7vw;
   font-size: 2rem;
 }
+
+.animated {
+  opacity: 0;
+  transition: all 0.8s;
+}
+  
+.animated.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+ }
