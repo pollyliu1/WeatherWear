@@ -20,23 +20,20 @@ function LocationPage() {
     setLocation(data);
     console.log(data);
   }
-  
-  
 }
 
 async function getData(e) {
   e.preventDefault();
   let entered = document.querySelector('input[name=location]').value;
-  console.log("Hi");
   try {
       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${entered}&APPID=5d3ee5a55974f0c208937bb96c64d208`);
-      console.log("Hi");
       if(!response.ok) {
           throw new Error('Network response was not OK');
       } else {
           const data = await response.json();
-          console.log(data);
-          console.log("Hi");
+          let main_temp = data['main'].temp;
+          let weather = data['weather'][0].description;
+          console.log(weather);
       }
   } catch (e) {
       console.log(e);
