@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Image from 'next/image'
 import hangers from './images/hangers.png'
+import { motion } from 'framer-motion';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.icon" />
       </Head>
+      
+      <motion.div initial="hidden" animate="visible" variants={{
+      hidden: {
+        opacity: 0
+      },
+      visible: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+          delay: 0.15
+        }
+      },}}>
       <div className ='container'>
         <div className='home-text'>
           <h1 className={styles.title}>WeatherWear</h1>
@@ -36,7 +49,9 @@ export default function Home() {
             </Image>
           </div>
       </div>
+      </motion.div>
     </div>
+    
       <div className='about' data-aos="fade-in">
         <h1 className='about-title'>About Us</h1>
         <p className='about-info'>We are a website that generates outfits based on gender, style, and weather.
