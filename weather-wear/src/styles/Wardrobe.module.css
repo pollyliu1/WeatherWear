@@ -1,7 +1,9 @@
 .body {
     display: flex;
-    gap: 28vw;
+    gap: 20vw;
     margin: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .title {

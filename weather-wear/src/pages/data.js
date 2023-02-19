@@ -1,8 +1,9 @@
 let data = {
-    image: "https://cdn.shoplightspeed.com/shops/625872/files/31592911/800x1024x1/space46-payton-maxi-dress-sage-green.jpg",
+    image: "https://i.pinimg.com/750x/7b/a9/c0/7ba9c0fd210b534bccef0c6474f0b367.jpg",
     style: "",
-    temp: "",
-    weather: ""
+    temp: "273.15",
+    weather: "Null",
+    icon: "https://cdn-icons-png.flaticon.com/512/1555/1555512.png",
 }
 
 export default data;

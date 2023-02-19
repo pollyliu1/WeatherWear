@@ -36,13 +36,6 @@ const ImageCard = async () => {
     storedData.image = response;
   })
   
-  const data = await response.json();
-  console.log(response);
-  console.log(typeof response);
-  
-  setTimeout(() => {
-      storedData.image = data;
-  }, 1000);
 }
 
 
@@ -50,6 +43,7 @@ async function getData(e) {
   e.preventDefault();
   let entered = document.querySelector('input[name=location]').value;
   let style = document.querySelector('input[name=style]').value;
+
   try {
       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${entered}&APPID=5d3ee5a55974f0c208937bb96c64d208`);
       if(!response.ok) {
@@ -59,7 +53,9 @@ async function getData(e) {
           storedData.temp = data['main'].temp;
           storedData.weather = data['weather'][0].description;
           storedData.style = style;
+          storedData.icon = `http://openweathermap.org/img/wn/${data['weather'][0].icon}@2x.png`;
           console.log(storedData.style);
+          console.log(storedData.icon);
           await ImageCard();
       }
   } catch (e) {
@@ -105,9 +101,9 @@ export default function Wardrobe() {
             <Button className={styles.btn} type="submit" onClick={getData}>Generate Outfit</Button>
           </form>
 
-          <p className={styles.weather}>Weather: </p>
-          <p className={styles.weather}>Temperature:</p>
-          <p className={styles.weather}>Winds:</p>
+          <p className={styles.weather}>Weather: {storedData.weather} </p>
+          <p className={styles.weather}>Temperature: {Math.round((storedData.temp - 273.15)*100)/100} degrees Celsius</p>
+          <img src={`${storedData.icon}`} height={200} width={200}/>
         </div>
         </Card>
         </div>
@@ -117,8 +113,10 @@ export default function Wardrobe() {
             <p className={styles.intro}>Outfit</p>
             <Image src={storedData.image} alt="outfit pic"
               loader={() => src}
-              width={200}
-              height={200}>
+              width={300}
+              height={500}
+              object-fit="cover"
+              style={{borderRadius: 30 + 'px'}}>
             </Image>
           </div>
         
