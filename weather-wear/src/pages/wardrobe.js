@@ -63,6 +63,7 @@ async function getData(e) {
           storedData.icon = `http://openweathermap.org/img/wn/${data['weather'][0].icon}@2x.png`;
           console.log(storedData.style);
           console.log(storedData.icon);
+          console.log(storedData.temp);
           await ImageCard();
       }
   } catch (e) {
@@ -105,7 +106,7 @@ export default function Wardrobe() {
               <input type='text' className={styles.input} id='style' name='style' autoComplete='off'></input>
             </div>
             <div className='button-center'>
-            <Button className={styles.btn} type="submit">Generate Outfit</Button>
+            <Button className={styles.btn} type="submit" onClick={getData}>Generate Outfit</Button>
             </div>
             
           </form>
@@ -124,7 +125,7 @@ export default function Wardrobe() {
               loader={() => src}
               width={300}
               height={500}
-              object-fit="cover"
+              object-fit="fill"
               style={{borderRadius: 30 + 'px'}}>
             </Image>
           </div>
