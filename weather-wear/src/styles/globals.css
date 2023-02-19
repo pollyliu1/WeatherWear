@@ -214,11 +214,15 @@ label {
  }
 
  .MuiButton-root {
-  background-color: #232737;
+  background-color: #232737 !important;
   color: #f2f2ff;
+  border-radius: 15px;
  }
 
- 
+ .button-center {
+  align-items: center;
+  text-align: center;
+ }
 
  .about-info {
   padding: 30px;
