@@ -4,6 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Wardrobe.module.css'
 import dressPic from './images/dress.jpg'
 import React from 'react'
+import Card from '@mui/material/Card'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,9 @@ export default function Wardrobe() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.icon" />
       </Head>
+      
       <div className={styles.body}>
+      <Card>
         <div className={styles.sidebar}>
           <h1 className={styles.title}>Today's Outfit</h1>
           <h4 className={styles.intro}>Enter your information below:</h4>
@@ -43,6 +46,7 @@ export default function Wardrobe() {
           <p className={styles.weather}>Temperature:</p>
           <p className={styles.weather}>Winds:</p>
         </div>
+        </Card>
 
         
           <div className='outfit'>
