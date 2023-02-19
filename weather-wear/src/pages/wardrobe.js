@@ -16,7 +16,7 @@ const src = `${storedData.image}`;
 
 
 const ImageCard = async () => {
-  const prompt = {"image": `${storedData.weather}`}
+  const prompt = {"image": `female clothing ${storedData.weather}`}
   // const response = await fetch('https://pollyliu.autocode.dev/weatherwear@dev/puppeteer/', {
   //   method: 'POST',
   //   headers: {
